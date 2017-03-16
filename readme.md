@@ -1,4 +1,6 @@
-#Binary STL File Reader in Pure numpy
+#BinarySTLFileReader
+
+Binary STL File Reader in Pure numpy
 
 Back in 2013, wrote this small little python program to read in binary STL file.
 
@@ -8,12 +10,12 @@ This was lying on my [blog](https://wordpress.com/post/sukhbinder.wordpress.com/
 
 Added a new code to visualize
 
-##Example usage
+#Example
 
-'''python
+~~~python
 
 from binarySTLreader import BinarySTL,ShowSTLFile
 h,p,n,v1,v2,v3=BinarySTL('bent_plate.stl')
 ShowSTLFile(v1,v2,v3)
 
-'''
+~~~
