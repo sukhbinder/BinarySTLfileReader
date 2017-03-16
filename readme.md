@@ -1,4 +1,4 @@
-#BinarySTLFileReader
+# BinarySTLFileReader
 
 Binary STL File Reader in Pure numpy
 
@@ -10,9 +10,9 @@ This was lying on my [blog](https://wordpress.com/post/sukhbinder.wordpress.com/
 
 Added a new code to visualize
 
-#Example
+## Example
 
-~~~python
+~~~ python
 
 from binarySTLreader import BinarySTL,ShowSTLFile
 h,p,n,v1,v2,v3=BinarySTL('bent_plate.stl')
