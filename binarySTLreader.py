@@ -15,10 +15,9 @@ import mpl_toolkits.mplot3d as a3d
 import matplotlib.colors as colors
 import matplotlib.pyplot as plt
 
-#fname=r'coordtopo.npy'
-#coords,topo=np.load(fname)
 
 def ShowCooordsTopology(coords,topo):
+    '''Plots the STL if coords and topology is given.  '''
     ax = a3d.Axes3D(plt.figure())
  
     xm,ym,zm=coords.max(axis=0)
@@ -39,7 +38,7 @@ def ShowCooordsTopology(coords,topo):
 
 
 def ShowSTLFile(v1,v2,v3):
-    
+    '''Plots the STL files, give vertices v1,v2,v3'''
     ax = a3d.Axes3D(plt.figure())  
     
     xm,ym,zm=v1.max(axis=0)
@@ -62,11 +61,12 @@ def ShowSTLFile(v1,v2,v3):
 
 
 def BinarySTL(fname):
+    '''Reads a binary STL file '''
     fp = open(fname, 'rb')
     Header = fp.read(80)
     nn = fp.read(4)
     Numtri = unpack('i', nn)[0]
-    #print nn
+    #print 'Number of triangles in the STL file: ',nn
     record_dtype = np.dtype([
                    ('normals', np.float32,(3,)),  
                    ('Vertex1', np.float32,(3,)),
